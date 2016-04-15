@@ -24,6 +24,10 @@ pod "SunnyNavigation"
 
 amaker, itamaker@gmail.com
 
+##Github
+
+https://github.com/itamaker
+
 ## License
 
 SunnyNavigation is available under the MIT license. See the LICENSE file for more info.
