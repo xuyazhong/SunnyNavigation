@@ -24,6 +24,26 @@ SunnyNavigation is an Navigation library written in Swift.
 - If you **have a feature request**, open an issue.
 - If you **want to contribute**, submit a pull request.
 
+
+## Usage
+
+#### Response JSON Handler
+
+```swift
+
+override func viewDidLoad() {
+super.viewDidLoad()
+
+self.navigationItem.setItemWithTitle("Left", textColor: UIColor.blueColor(), size: 20, type: .left) 
+}
+
+
+```
+
+---
+
+
+
 ## Installation
 
 > **Embedded frameworks require a minimum deployment target of iOS 8 or OS X Mavericks (10.9).**
@@ -115,22 +135,6 @@ $ git submodule add https://github.com/fishcafe/SunnyNavigation.git
 
 ---
 
-## Usage
-
-#### Response JSON Handler
-
-```swift
-
-override func viewDidLoad() {
-super.viewDidLoad()
-
-self.navigationItem.setItemWithTitle("Left", textColor: UIColor.blueColor(), size: 20, type: .left) 
-}
-
-
-```
-
----
 
 ## Author
 
@@ -152,4 +156,5 @@ If you believe you have identified a security vulnerability with SunnyNavigation
 ## License
 
 SunnyNavigation is released under the MIT license. See LICENSE for details.
+
 
