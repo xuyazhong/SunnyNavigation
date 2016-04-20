@@ -32,15 +32,12 @@ SunnyNavigation is an Navigation library written in Swift.
 
 	override func viewDidLoad() {
 	super.viewDidLoad()
-		self.navigationItem.setItemWithTitle("Left", textColor: 		UIColor.blueColor(), size: 20, type: .left) 
+		self.navigationItem.setItemWithTitle("Left", textColor:UIColor.blueColor(), size: 20, type: .left) 
 	}
 
 
 ```
-
 ---
-
-
 
 ## Installation
 
