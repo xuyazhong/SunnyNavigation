@@ -27,15 +27,13 @@ SunnyNavigation is an Navigation library written in Swift.
 
 ## Usage
 
-#### Response JSON Handler
 
 ```swift
 
-override func viewDidLoad() {
-super.viewDidLoad()
-
-self.navigationItem.setItemWithTitle("Left", textColor: UIColor.blueColor(), size: 20, type: .left) 
-}
+	override func viewDidLoad() {
+	super.viewDidLoad()
+		self.navigationItem.setItemWithTitle("Left", textColor: 		UIColor.blueColor(), size: 20, type: .left) 
+	}
 
 
 ```
@@ -90,7 +88,7 @@ $ brew install carthage
 To integrate SunnyNavigation into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "fishcafee/SunnyNavigation" ~> 0.1.0
+github "fishcafe/SunnyNavigation" ~> 0.1.0
 ```
 
 Run `carthage update` to build the framework and drag the built `SunnyNavigation.framework` into your Xcode project.
