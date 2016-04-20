@@ -9,7 +9,7 @@ SunnyNavigation is an Navigation library written in Swift.
 
 ##Screenshot
 
-![演示1](http://7xt6c9.com1.z0.glb.clouddn.com/Simulator%20Screen%20Shot%202016%E5%B9%B44%E6%9C%8820%E6%97%A5%2012.47.00.png)
+![演示1](http://7xt6c9.com2.z0.glb.clouddn.com/SunnyNavigation.png)
 
 ## Features
 
