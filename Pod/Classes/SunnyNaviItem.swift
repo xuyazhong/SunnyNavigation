@@ -15,7 +15,7 @@ public enum ItemType {
 
 let Default_Offset:CGFloat =  10.0
 
-let TitleViewSize = CGSizeMake(70, 30)//用NSString设置item时 item的尺寸
+let TitleViewSize = CGSizeMake(120, 30)//用NSString设置item时 item的尺寸
 
 public class SunnyNaviItem: NSObject {
     
