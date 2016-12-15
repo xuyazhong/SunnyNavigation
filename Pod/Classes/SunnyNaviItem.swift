@@ -15,7 +15,8 @@ public enum ItemType {
 
 let Default_Offset:CGFloat =  10.0
 
-let TitleViewSize = CGSizeMake(120, 30)//用NSString设置item时 item的尺寸
+let TitleViewSize = CGSizeMake(120, 40)//用NSString设置item时 item的尺寸
+let LeftViewSize = CGSizeMake(50, 40)//用NSString设置item时 item的尺寸
 
 public class SunnyNaviItem: NSObject {
     
@@ -38,7 +39,11 @@ public class SunnyNaviItem: NSObject {
     
       public static func itemWithTitle(title:String,textColor:UIColor,fontSize:CGFloat,itemType:ItemType) -> SunnyNaviItem{
         let item = SunnyNaviItem()
-        item.initCustomItemWithType(itemType, size: TitleViewSize)
+        if itemType == .center {
+            item.initCustomItemWithType(itemType, size: TitleViewSize)
+        } else {
+            item.initCustomItemWithType(itemType, size: LeftViewSize)
+        }
         item.setItemContetnWithType(itemType)
         item.contentBarItem?.setTitle(title, forState: .Normal)
         item.contentBarItem?.setTitleColor(textColor, forState: .Normal)
