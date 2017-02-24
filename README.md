@@ -129,6 +129,7 @@ $ git submodule add https://github.com/fishcafe/SunnyNavigation.git
 > You can verify which one you selected by inspecting the build log for your project. The build target for `SunnyNavigation` will be listed as either `SunnyNavigation iOS` or `SunnyNavigation OSX`.
 
 - And that's it!
+ Swift 2.3
 
 > The `SunnyNavigation.framework` is automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.
 
