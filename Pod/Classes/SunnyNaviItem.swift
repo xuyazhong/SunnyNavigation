@@ -27,7 +27,7 @@ open class SunnyNaviItem: NSObject {
     open var customView:UIView?
     open var isCustomView:Bool?
     
-      func initCustomItemWithType(_ type:ItemType,size:CGSize) {
+      func initCustomItemWithType(_ type : ItemType, size : CGSize) {
         self.isCustomView = false
         self.itemType = type
         self.items = NSMutableArray()
@@ -37,7 +37,10 @@ open class SunnyNaviItem: NSObject {
     }
     
     
-      open static func itemWithTitle(_ title:String,textColor:UIColor,fontSize:CGFloat,itemType:ItemType) -> SunnyNaviItem{
+      open static func itemWithTitle(_ title : String,
+                                     textColor : UIColor,
+                                     fontSize : CGFloat,
+                                     itemType : ItemType) -> SunnyNaviItem{
         let item = SunnyNaviItem()
         if itemType == .center {
             item.initCustomItemWithType(itemType, size: TitleViewSize)
@@ -51,7 +54,9 @@ open class SunnyNaviItem: NSObject {
         return item
     }
     
-    open static func itemWithImage(_ itemWithImage:String,size:CGSize,type:ItemType) -> SunnyNaviItem{
+    open static func itemWithImage(_ itemWithImage : String,
+                                   size : CGSize,
+                                   type : ItemType) -> SunnyNaviItem{
         let  item = SunnyNaviItem()
         item.initCustomItemWithType(type, size: size)
         item.setItemContetnWithType(type)
@@ -60,7 +65,8 @@ open class SunnyNaviItem: NSObject {
     }
     
     
-    open static func itemWithCustomeView(_ customView:UIView,type:ItemType) -> SunnyNaviItem{
+    open static func itemWithCustomeView(_ customView : UIView,
+                                         type : ItemType) -> SunnyNaviItem{
         let item = SunnyNaviItem()
         item.initCustomItemWithType(type, size: customView.frame.size)
         item.isCustomView = true
@@ -72,7 +78,9 @@ open class SunnyNaviItem: NSObject {
     }
     
     
-    open func addTarget(_ target:AnyObject,selector:Selector,event:UIControlEvents){
+    open func addTarget(_ target : AnyObject,
+                        selector : Selector,
+                        event : UIControlEvents) {
         self.contentBarItem?.addTarget(target, action: selector, for: event)
     }
     
@@ -80,7 +88,7 @@ open class SunnyNaviItem: NSObject {
      *设置item偏移量
      *@param offSet 正值向左偏，负值向右偏
      */
-   open  func setOffset(_ offSet:CGFloat)  {
+   open func setOffset(_ offSet : CGFloat)  {
         if (self.isCustomView != nil) {
             var customViewFrame = self.customView?.frame
             customViewFrame?.origin.x = offSet
@@ -93,7 +101,7 @@ open class SunnyNaviItem: NSObject {
         
     }
     
-   open func setItemContetnWithType(_ type:ItemType){
+   open func setItemContetnWithType(_ type : ItemType){
         if type == .right {
             self.contentBarItem?.contentHorizontalAlignment = .right
             self.setOffset(Default_Offset)
@@ -103,15 +111,13 @@ open class SunnyNaviItem: NSObject {
         }
     }
     
-    open func setItemWithNavigationItem(_ navigationItem:UINavigationItem,type:ItemType){
+    open func setItemWithNavigationItem(_ navigationItem: UINavigationItem, type : ItemType){
         if type == .center {
             navigationItem.titleView = self.contentBarItem
-        }
-        else if type == .left{
+        } else if type == .left{
             navigationItem.setLeftBarButton(UIBarButtonItem(customView: self.contentBarItem! ), animated: false)
             
-        }
-        else if type == .right{
+        } else if type == .right{
             navigationItem.setRightBarButton(UIBarButtonItem(customView: self.contentBarItem! ), animated: false)
         }
         
