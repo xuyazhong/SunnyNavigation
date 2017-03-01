@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         let leftNavi = self.navigationItem.setItemWithTitle("Left", textColor: UIColor.blue, size: 20, type: .left) as SunnyNaviItem
         leftNavi.addTarget(self, selector: #selector(actionNavi), event: .touchUpInside)
         
-        let _ = self.navigationItem.setItemWithTitle("Center", textColor: UIColor.blue, size: 20, type: .center)
-        let _ = self.navigationItem.setItemWithTitle("Right", textColor: UIColor.blue, size: 20, type: .right)
+        self.navigationItem.setItemWithTitle("Center", textColor: UIColor.blue, size: 20, type: .center)
+        self.navigationItem.setItemWithTitle("Right", textColor: UIColor.blue, size: 20, type: .right)
     }
     
     
